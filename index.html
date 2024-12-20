@@ -4,97 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equation solution</title>
+    <title>Equation Solver</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
     <div class="contaienr">
-        <h1>Equation solution</h1>
-        <p>Select Equation Type</p>
+
+        <h1>Equation Solver</h1>
+        <label for="equation-type">Select Equation Type:</label>
+
         <form id="equationForm">
-
-            <!-- select equationType -->
-
-            <select name="" id="equation-type">
-                <option value="" disabled selected>First of all select an equation type</option>
-                <option value="eleven">ax + b = 0 ; x = ?</option>
-                <option value="first-y">ax + by + 1 = 0 ; y = ?</option>
-                <option value="first-x">ax + by + 1 = 0 ; x = ?</option>
-                <option value="second-y">ax + by + c = 0 ; y = ?</option>
-                <option value="second-x">ax + by + c = 0 ; x = ?</option>
-                <option value="third-x">ax&#178; + bx + c = 0 ; x = ?</option>
-                <option value="third-c">ax&#178; + bx + c = 0 ; c = ?</option>
-                <option value="fourth">x&#178; + y&#178; = r&#178; ; r = ?</option>
-                <option value="fifth-a">a&#178; + b&#178; = c&#178; ; a=?</option>
-                <option value="fifth-b">a&#178; + b&#178; = c&#178; ; b=?</option>
-                <option value="fifth-c">a&#178; + b&#178; = c&#178; ; c=?</option>
-                <option value="eighth-m">y = mx + c ; m = ?</option>
-                <option value="eighth-y">y = mx + c ; y = ?</option>
-                <option value="eighth-x">y = mx + c ; x = ?</option>
-                <option value="eighth-c">y = mx + c ; c = ?</option>
-                <option value="ninth-e">E = mc&#178; ; E = ?</option>
-                <option value="ninth-m">E = mc&#178; ; m = ?</option>
-                <option value="tenth">x = (-b &#177; &#8730;(b&#178; - 4ac)) / 2a ; x = ?</option>
+            <select id="equation-type">
+                <option value="">-- Select an equation type --</option>
+                <option value="eleven">ax + b = 0; x = ?</option>
+                <option value="first-y">ax + by + 1 = 0; y = ?</option>
+                <option value="first-x">ax + by + 1 = 0; x = ?</option>
+                <option value="second-y">ax + by + c = 0; y = ?</option>
+                <option value="second-x">ax + by + c = 0; x = ?</option>
+                <option value="third-x">ax² + bx + c = 0; x = ?</option>
+                <option value="third-c">ax² + bx + c = 0; c = ?</option>
+                <option value="fourth">x² + y² = r²; r = ?</option>
+                <option value="fifth-a">a² + b² = c²; a = ?</option>
+                <option value="fifth-b">a² + b² = c²; b = ?</option>
+                <option value="fifth-c">a² + b² = c²; c = ?</option>
+                <option value="eighth-m">y = mx + c; m = ?</option>
+                <option value="eighth-y">y = mx + c; y = ?</option>
+                <option value="eighth-x">y = mx + c; x = ?</option>
+                <option value="eighth-c">y = mx + c; c = ?</option>
+                <option value="ninth-e">E = mc²; E = ?</option>
+                <option value="ninth-m">E = mc²; m = ?</option>
+                <option value="tenth">x = (-b ± √(b² - 4ac)) / 2a; x = ?</option>
             </select>
 
-            <section id="input-area" class="input">
-                <div id="i-a">
-                    <label for="a">Value of a:</label>
-                    <input type="number" id="a" required>
+            <section class="input">
+                <div>
+                    <label for="a">Enter a:</label>
+                    <input type="number" id="a">
                 </div>
 
-                <div id="i-b">
-                    <label for="b">Value of b:</label>
-                    <input type="number" id="b" required>
+                <div>
+                    <label for="b">Enter b:</label>
+                    <input type="number" id="b">
                 </div>
 
-                <div id="i-c">
-                    <label for="c">Value of c:</label>
-                    <input type="number" id="c" required>
+                <div>
+                    <label for="c">Enter c:</label>
+                    <input type="number" id="c">
                 </div>
 
-                <div id="i-d">
-                    <label for="d">Value of d:</label>
-                    <input type="number" id="d" required>
+                <div>
+                    <label for="d">Enter d:</label>
+                    <input type="number" id="d">
                 </div>
 
-                <div id="i-e">
-                    <label for="e">Value of e:</label>
-                    <input type="number" id="e" required>
+                <div>
+                    <label for="e">Enter e:</label>
+                    <input type="number" id="e">
                 </div>
 
-                <div id="i-m">
-                    <label for="m">Value of m:</label>
-                    <input type="number" id="m" required>
+                <div>
+                    <label for="m">Enter m:</label>
+                    <input type="number" id="m">
                 </div>
 
-                <div id="i-r">
-                    <label for="r">Value of r:</label>
-                    <input type="number" id="r" required>
+                <div>
+                    <label for="r">Enter r:</label>
+                    <input type="number" id="r">
                 </div>
 
-                <div id="i-x">
-                    <label for="x">Value of x:</label>
-                    <input type="number" id="x" required>
+                <div>
+                    <label for="x">Enter x:</label>
+                    <input type="number" id="x">
                 </div>
 
-                <div id="i-y">
-                    <label for="y">Value of y:</label>
-                    <input type="number" id="y" required>
+                <div>
+                    <label for="y">Enter y:</label>
+                    <input type="number" id="y">
                 </div>
-
-                <button onclick="enabledInput (value)" id="butt" type="submit">Solve</button>
             </section>
 
+            <button id="butt" type="submit">Solve</button>
         </form>
-        <h2 id="result"></h2>
 
-
-        <script src="script.js"></script>
+        <div class="result" id="result"></div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
